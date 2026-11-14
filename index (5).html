@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angelo Kyle O. Diaz - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Angelo Kyle O. Diaz</h1>
+    <p>BSIT 1st Year Student</p>
+  </div>
+
+  <div class="menu">
+    <a href="#personal">Personal Information</a>
+    <a href="#education">Educational Background</a>
+    <a href="#skills">Skills</a>
+    <a href="#java">Java Code</a>
+  </div>
+
+  <div class="page">
+
+    <div class="section" id="personal">
+      <h2>Personal Information</h2>
+      <p>Hello! My name is Angelo Kyle Diaz. I am a first year Information Technology student from Bambanaba, Cuyapo, Nueva Ecija. I am still learning how to code and I like making small programs and web pages. I want to join JPCS Inc. as a Junior Programmer so I can learn more.</p>
+      <ul>
+        <li>Name: Angelo Kyle O. Diaz</li>
+        <li>Email: <a href="mailto:angelokylediaz2008@gmail.com">angelokylediaz2008@gmail.com</a></li>
+        <li>Contact Number: 09300259858</li>
+        <li>Address: Bambanaba, Cuyapo, Nueva Ecija</li>
+        <li>Course: Bachelor of Science in Information Technology (1st Year)</li>
+      </ul>
+    </div>
+
+    <div class="section" id="education">
+      <h2>Educational Background</h2>
+      <p>These are the schools I attended:</p>
+      <ul>
+        <li>Elementary: Bambanaba Elementary School</li>
+        <li>High School: Dr. Ramon De Santos National High School</li>
+        <li>Senior High School: Our Lady of the Sacred Heart College of Guimba, Inc.</li>
+        <li>College: Our Lady of the Sacred Heart College of Guimba, Inc. (BSIT, 1st Year, A.Y. 2026-2027)</li>
+      </ul>
+    </div>
+
+    <div class="section" id="skills">
+      <h2>Skills</h2>
+      <p>These are the skills I have learned so far:</p>
+      <ul>
+        <li>Java (basic): variables, if else, loops</li>
+        <li>HTML (basic)</li>
+        <li>CSS (basic)</li>
+        <li>Using Command Prompt to compile and run Java</li>
+        <li>Using GitHub (still learning)</li>
+        <li>Microsoft Office</li>
+        <li>Problem solving</li>
+        <li>Teamwork and communication</li>
+        <li>Willing to learn new things</li>
+      </ul>
+    </div>
+
+    <div class="section" id="java">
+      <h2>Java Code</h2>
+      <p>This is my final Performance Task in CC102. It is a console-based Rock, Paper, Scissors game. The player chooses rock, paper or scissors and the computer chooses too. The first one to get 3 points wins the game.</p>
+      <p>I used variables, if else statements and a while loop in this program.</p>
+      <p><a href="RockPaperScissors.java" download>Download the Java file</a></p>
+<pre>import java.util.Random;
+import java.util.Scanner;
+
+public class RockPaperScissors {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        int playerScore = 0;
+        int computerScore = 0;
+        int roundNumber = 0;
+
+        System.out.println("=== ROCK PAPER SCISSORS ===");
+        System.out.println("First one to get 3 points wins!");
+
+        // loop until someone reaches 3 points
+        while (playerScore &lt; 3 &amp;&amp; computerScore &lt; 3) {
+            roundNumber = roundNumber + 1;
+
+            System.out.println();
+            System.out.println("Round " + roundNumber);
+            System.out.println("1 - Rock");
+            System.out.println("2 - Paper");
+            System.out.println("3 - Scissors");
+            System.out.print("Your choice: ");
+            int player = input.nextInt();
+
+            if (player &lt; 1 || player &gt; 3) {
+                System.out.println("Wrong choice. Please type 1, 2 or 3.");
+                roundNumber = roundNumber - 1;
+                continue;
+            }
+
+            int computer = random.nextInt(3) + 1;
+
+            // show what the computer picked
+            String computerName = "";
+            if (computer == 1) {
+                computerName = "Rock";
+            } else if (computer == 2) {
+                computerName = "Paper";
+            } else {
+                computerName = "Scissors";
+            }
+            System.out.println("Computer chose: " + computerName);
+
+            // check who wins the round
+            if (player == computer) {
+                System.out.println("It is a tie!");
+            } else if (player == 1 &amp;&amp; computer == 3) {
+                System.out.println("Rock beats Scissors. You get a point!");
+                playerScore = playerScore + 1;
+            } else if (player == 2 &amp;&amp; computer == 1) {
+                System.out.println("Paper beats Rock. You get a point!");
+                playerScore = playerScore + 1;
+            } else if (player == 3 &amp;&amp; computer == 2) {
+                System.out.println("Scissors beats Paper. You get a point!");
+                playerScore = playerScore + 1;
+            } else {
+                System.out.println("The computer wins this round.");
+                computerScore = computerScore + 1;
+            }
+
+            System.out.println("Score - You: " + playerScore + " | Computer: " + computerScore);
+        }
+
+        // show the final winner
+        System.out.println();
+        if (playerScore == 3) {
+            System.out.println("Congratulations! You won the game!");
+        } else {
+            System.out.println("Sorry, the computer won the game.");
+        }
+
+        input.close();
+    }
+}</pre>
+    </div>
+
+  </div>
+
+  <p class="footer">Made by Angelo Kyle O. Diaz</p>
+
+</body>
+</html>

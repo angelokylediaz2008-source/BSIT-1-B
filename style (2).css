@@ -1,0 +1,96 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  color: #222222;
+  background-color: #e8f3e8;
+  margin: 0;
+}
+
+* {
+  font-weight: normal;
+}
+
+.header {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 8px 0 0 0;
+}
+
+.menu {
+  background-color: #2e7d32;
+  text-align: center;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.section {
+  background-color: white;
+  border: 1px solid #81c784;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #1b5e20;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+a {
+  color: #1565c0;
+}
+
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  overflow: auto;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+
+.footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: 94%;
+  }
+
+  .menu a {
+    display: inline-block;
+    margin: 4px 8px;
+  }
+}
